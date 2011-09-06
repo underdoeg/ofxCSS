@@ -1,0 +1,5 @@
+obj/
+*.session
+example/bin/libs
+*.workspace.*
+example/bin/example
