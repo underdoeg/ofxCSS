@@ -4,12 +4,27 @@
 #include "ofMain.h"
 #include "parser_pp.h"
 
+class ofxCssBorder {
+public:
+	bool enabled;
+	ofColor color;
+	float width;
+};
+
 class ofxCssSpacer {
 public:
-	float &operator[](int i) {
+	ofxCssSpacer(float val=0){
+		setAll(val);
+	}
+
+	void setAll(float val) {
+		top=left=right=bottom=val;
+	};
+
+	float operator[](int i) {
 		return get(i);
 	};
-	float &get(int i) {
+	float get(int i) {
 		switch(i) {
 		case 0:
 			return top;
@@ -20,6 +35,7 @@ public:
 		case 3:
 			return left;
 		};
+		return 0;
 	};
 	float top;
 	float left;
@@ -29,11 +45,15 @@ public:
 
 class ofxCssBlock {
 public:
-	bool hasBg;
-	bool hasBorder;
+	bool hasBackground;
+	bool hasBackgroundImage;
 	ofColor color;
 	ofColor backgroundColor;
-	ofColor borderColor;
+	ofPtr<ofImage> backgroundImage;
+	ofxCssBorder borderTop;
+	ofxCssBorder borderRight;
+	ofxCssBorder borderBottom;
+	ofxCssBorder borderLeft;
 };
 
 
@@ -54,12 +74,35 @@ public:
 	ofxCssBlock parseAttributeList(AttributeList list);
 
 private:
-	void pBackgroundColor(ofxCssBlock& block, string value);
-
 	void parseAttribute(ofxCssBlock& block, string property, string value);
 	BlockList blocks;
 	htmlcxx::CSS::Parser parser;
 	ParserFunctionsList parserFunctions;
+
+	/* CSS PARSING FUNCTIONS */
+	//colors
+	void pBackgroundColor(ofxCssBlock& block, string value);
+
+	//margin
+	void pMargin(ofxCssBlock& block, string value);
+	void pMarginTop(ofxCssBlock& block, string value);
+	void pMarginLeft(ofxCssBlock& block, string value);
+	void pMarginRight(ofxCssBlock& block, string value);
+	void pMarginBottom(ofxCssBlock& block, string value);
+
+	//padding
+	void pPadding(ofxCssBlock& block, string value);
+	void pPaddingTop(ofxCssBlock& block, string value);
+	void pPaddingLeft(ofxCssBlock& block, string value);
+	void pPaddingRight(ofxCssBlock& block, string value);
+	void pPaddingBottom(ofxCssBlock& block, string value);
+
+	//border
+	void pBorder(ofxCssBlock& block, string value);
+	void pBorderTop(ofxCssBlock& block, string value);
+	void pBorderRight(ofxCssBlock& block, string value);
+	void pBorderBottom(ofxCssBlock& block, string value);
+	void pBorderLeft(ofxCssBlock& block, string value);
 };
 
 #endif // OFXCSS_H
