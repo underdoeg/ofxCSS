@@ -79,7 +79,7 @@ public:
 	void load(string file);
 	void parse(string css);
 	ofxCssBlock &operator[](string element);
-	ofxCssBlock &get(string element);
+	ofxCssBlock &get(string element, string ofClass = "");
 	ofxCssBlock parseAttributeList(AttributeList list);
 
 private:

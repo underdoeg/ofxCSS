@@ -7,11 +7,12 @@ void exampleApp::setup(){
 	ofSetFrameRate(60);
 
 	ofSetLogLevel(OF_LOG_NOTICE);
+
 	//load the css file
 	css.load("sample.css");
 
 	//get a css block
-	css.get("parent");
+	//css.get("rect1");
 }
 
 //--------------------------------------------------------------
@@ -22,6 +23,7 @@ void exampleApp::update(){
 void exampleApp::draw(){
 	ofxCssBlock block = css.get("rect1");
 	ofSetColor(block.backgroundColor);
+	ofRect(100,100,200,200);
 }
 
 //--------------------------------------------------------------

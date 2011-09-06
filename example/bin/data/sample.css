@@ -1,9 +1,18 @@
 rect1{
-	background-color: red;
+	background-color: #ff00FF;
 	margin: 5px;
 	margin-top: 10px;
 }
 
-parent child{
+parent{
 	margin: 10px;
+}
+
+child{
+	margin: 20px;
+	border-top: 30px;
+}
+
+child.test{
+	margin: 5px;
 }
