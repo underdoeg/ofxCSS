@@ -11,7 +11,7 @@ void exampleApp::setup(){
 	css.load("sample.css");
 
 	//get a css block
-	css.get("rect1");
+	css.get("parent");
 }
 
 //--------------------------------------------------------------

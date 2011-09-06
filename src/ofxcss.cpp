@@ -7,6 +7,7 @@ using namespace htmlcxx::CSS;
 ofxCss::ofxCss() {
 	//all the parser functions
 	parserFunctions["background-color"] = &ofxCss::pBackgroundColor;
+	parserFunctions["color"] = &ofxCss::pColor;
 	//
 	parserFunctions["margin"] = &ofxCss::pMargin;
 	parserFunctions["margin-top"] = &ofxCss::pMarginTop;
@@ -25,6 +26,8 @@ ofxCss::ofxCss() {
 	parserFunctions["border-right"] = &ofxCss::pBorderRight;
 	parserFunctions["border-bottom"] = &ofxCss::pBorderBottom;
 	parserFunctions["border-left"] = &ofxCss::pBorderLeft;
+	//
+	parserFunctions["background-image"] = &ofxCss::pBackgroundImage;
 }
 
 ofxCss::~ofxCss() {
@@ -48,10 +51,13 @@ ofxCssBlock &ofxCss::get(string element) {
 		return blocks[key];
 
 	//we have to create a new one
-	Parser::Selector selector;
-	selector.setElement(element);
 	std::vector<Parser::Selector> selectorList;
-	selectorList.push_back(selector);
+	std::vector<string> elements = ofSplitString(element, " ", true, true);
+	for(std::vector<string>::iterator it=elements.begin(); it!=elements.end();++it){
+		Parser::Selector selector;
+		selector.setElement(element);
+		selectorList.push_back(selector);
+	}
 	blocks[key] = parseAttributeList(parser.getAttributes(selectorList));
 	return blocks[key];
 }
@@ -84,7 +90,13 @@ void ofxCss::parseAttribute(ofxCssBlock& block, string property, string value) {
 /*
  * CSS PARSING FUNCTIONS
  */
+//color
 void ofxCss::pBackgroundColor(ofxCssBlock& block, string value)
+{
+
+}
+
+void ofxCss::pColor(ofxCssBlock& block, string value)
 {
 
 }
@@ -151,3 +163,10 @@ void ofxCss::pBorderRight(ofxCssBlock& block, string value)
 void ofxCss::pBorderTop(ofxCssBlock& block, string value)
 {
 }
+
+//bg
+void ofxCss::pBackgroundImage(ofxCssBlock& block, string value)
+{
+}
+
+

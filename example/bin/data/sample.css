@@ -3,3 +3,7 @@ rect1{
 	margin: 5px;
 	margin-top: 10px;
 }
+
+parent child{
+	margin: 10px;
+}

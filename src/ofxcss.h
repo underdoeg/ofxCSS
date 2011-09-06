@@ -4,6 +4,13 @@
 #include "ofMain.h"
 #include "parser_pp.h"
 
+class ofxCssNumber {
+public:
+	enum types {PIXEL, PERCENT};
+	float value;
+	types type;
+};
+
 class ofxCssBorder {
 public:
 	bool enabled;
@@ -13,7 +20,7 @@ public:
 
 class ofxCssSpacer {
 public:
-	ofxCssSpacer(float val=0){
+	ofxCssSpacer(float val=0) {
 		setAll(val);
 	}
 
@@ -24,6 +31,7 @@ public:
 	float operator[](int i) {
 		return get(i);
 	};
+
 	float get(int i) {
 		switch(i) {
 		case 0:
@@ -37,6 +45,7 @@ public:
 		};
 		return 0;
 	};
+
 	float top;
 	float left;
 	float right;
@@ -82,6 +91,7 @@ private:
 	/* CSS PARSING FUNCTIONS */
 	//colors
 	void pBackgroundColor(ofxCssBlock& block, string value);
+	void pColor(ofxCssBlock& block, string value);
 
 	//margin
 	void pMargin(ofxCssBlock& block, string value);
@@ -103,6 +113,9 @@ private:
 	void pBorderRight(ofxCssBlock& block, string value);
 	void pBorderBottom(ofxCssBlock& block, string value);
 	void pBorderLeft(ofxCssBlock& block, string value);
+
+	//image
+	void pBackgroundImage(ofxCssBlock& block, string value);
 };
 
 #endif // OFXCSS_H
