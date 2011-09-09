@@ -24,13 +24,13 @@
 		E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424610CC5A17004149E2 /* IOKit.framework */; };
 		E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		FAF888BB141A62D00073CCED /* exampleApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAF888B9141A62D00073CCED /* exampleApp.cpp */; };
-		FAF8890B141A62E60073CCED /* libboost_regex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF888FB141A62E60073CCED /* libboost_regex.a */; };
 		FAF8890C141A62E60073CCED /* css_lex.c in Sources */ = {isa = PBXBuildFile; fileRef = FAF888FD141A62E60073CCED /* css_lex.c */; };
 		FAF8890D141A62E60073CCED /* css_syntax.c in Sources */ = {isa = PBXBuildFile; fileRef = FAF888FF141A62E60073CCED /* css_syntax.c */; };
 		FAF8890E141A62E60073CCED /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = FAF88902141A62E60073CCED /* parser.c */; };
 		FAF8890F141A62E60073CCED /* parser_pp.cc in Sources */ = {isa = PBXBuildFile; fileRef = FAF88904141A62E60073CCED /* parser_pp.cc */; };
 		FAF88910141A62E60073CCED /* ofxcolorbyname.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAF88907141A62E60073CCED /* ofxcolorbyname.cpp */; };
 		FAF88911141A62E60073CCED /* ofxcss.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAF88909141A62E60073CCED /* ofxcss.cpp */; };
+		FAF88DBF141A6A940073CCED /* libboost_regex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF88DBE141A6A940073CCED /* libboost_regex.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,62 +85,6 @@
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 		FAF888B9141A62D00073CCED /* exampleApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = exampleApp.cpp; sourceTree = "<group>"; };
 		FAF888BA141A62D00073CCED /* exampleApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exampleApp.h; sourceTree = "<group>"; };
-		FAF888BF141A62E60073CCED /* concepts.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = concepts.hpp; sourceTree = "<group>"; };
-		FAF888C1141A62E60073CCED /* borland.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = borland.hpp; sourceTree = "<group>"; };
-		FAF888C2141A62E60073CCED /* cwchar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cwchar.hpp; sourceTree = "<group>"; };
-		FAF888C3141A62E60073CCED /* config.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = config.hpp; sourceTree = "<group>"; };
-		FAF888C4141A62E60073CCED /* icu.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = icu.hpp; sourceTree = "<group>"; };
-		FAF888C5141A62E60073CCED /* mfc.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = mfc.hpp; sourceTree = "<group>"; };
-		FAF888C6141A62E60073CCED /* pattern_except.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pattern_except.hpp; sourceTree = "<group>"; };
-		FAF888C8141A62E60073CCED /* object_cache.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = object_cache.hpp; sourceTree = "<group>"; };
-		FAF888C9141A62E60073CCED /* static_mutex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = static_mutex.hpp; sourceTree = "<group>"; };
-		FAF888CA141A62E60073CCED /* unicode_iterator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = unicode_iterator.hpp; sourceTree = "<group>"; };
-		FAF888CB141A62E60073CCED /* regex_traits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_traits.hpp; sourceTree = "<group>"; };
-		FAF888CC141A62E60073CCED /* user.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = user.hpp; sourceTree = "<group>"; };
-		FAF888CE141A62E60073CCED /* basic_regex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = basic_regex.hpp; sourceTree = "<group>"; };
-		FAF888CF141A62E60073CCED /* basic_regex_creator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = basic_regex_creator.hpp; sourceTree = "<group>"; };
-		FAF888D0141A62E60073CCED /* basic_regex_parser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = basic_regex_parser.hpp; sourceTree = "<group>"; };
-		FAF888D1141A62E60073CCED /* c_regex_traits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = c_regex_traits.hpp; sourceTree = "<group>"; };
-		FAF888D2141A62E60073CCED /* char_regex_traits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = char_regex_traits.hpp; sourceTree = "<group>"; };
-		FAF888D3141A62E60073CCED /* cpp_regex_traits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cpp_regex_traits.hpp; sourceTree = "<group>"; };
-		FAF888D4141A62E60073CCED /* cregex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cregex.hpp; sourceTree = "<group>"; };
-		FAF888D5141A62E60073CCED /* error_type.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = error_type.hpp; sourceTree = "<group>"; };
-		FAF888D6141A62E60073CCED /* fileiter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fileiter.hpp; sourceTree = "<group>"; };
-		FAF888D7141A62E60073CCED /* instances.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = instances.hpp; sourceTree = "<group>"; };
-		FAF888D8141A62E60073CCED /* iterator_category.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = iterator_category.hpp; sourceTree = "<group>"; };
-		FAF888D9141A62E60073CCED /* iterator_traits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = iterator_traits.hpp; sourceTree = "<group>"; };
-		FAF888DA141A62E60073CCED /* match_flags.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = match_flags.hpp; sourceTree = "<group>"; };
-		FAF888DB141A62E60073CCED /* match_results.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = match_results.hpp; sourceTree = "<group>"; };
-		FAF888DC141A62E60073CCED /* mem_block_cache.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = mem_block_cache.hpp; sourceTree = "<group>"; };
-		FAF888DD141A62E60073CCED /* perl_matcher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = perl_matcher.hpp; sourceTree = "<group>"; };
-		FAF888DE141A62E60073CCED /* perl_matcher_common.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = perl_matcher_common.hpp; sourceTree = "<group>"; };
-		FAF888DF141A62E60073CCED /* perl_matcher_non_recursive.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = perl_matcher_non_recursive.hpp; sourceTree = "<group>"; };
-		FAF888E0141A62E60073CCED /* perl_matcher_recursive.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = perl_matcher_recursive.hpp; sourceTree = "<group>"; };
-		FAF888E1141A62E60073CCED /* primary_transform.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = primary_transform.hpp; sourceTree = "<group>"; };
-		FAF888E2141A62E60073CCED /* protected_call.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = protected_call.hpp; sourceTree = "<group>"; };
-		FAF888E3141A62E60073CCED /* regbase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regbase.hpp; sourceTree = "<group>"; };
-		FAF888E4141A62E60073CCED /* regex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex.hpp; sourceTree = "<group>"; };
-		FAF888E5141A62E60073CCED /* regex_format.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_format.hpp; sourceTree = "<group>"; };
-		FAF888E6141A62E60073CCED /* regex_fwd.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_fwd.hpp; sourceTree = "<group>"; };
-		FAF888E7141A62E60073CCED /* regex_grep.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_grep.hpp; sourceTree = "<group>"; };
-		FAF888E8141A62E60073CCED /* regex_iterator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_iterator.hpp; sourceTree = "<group>"; };
-		FAF888E9141A62E60073CCED /* regex_match.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_match.hpp; sourceTree = "<group>"; };
-		FAF888EA141A62E60073CCED /* regex_merge.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_merge.hpp; sourceTree = "<group>"; };
-		FAF888EB141A62E60073CCED /* regex_raw_buffer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_raw_buffer.hpp; sourceTree = "<group>"; };
-		FAF888EC141A62E60073CCED /* regex_replace.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_replace.hpp; sourceTree = "<group>"; };
-		FAF888ED141A62E60073CCED /* regex_search.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_search.hpp; sourceTree = "<group>"; };
-		FAF888EE141A62E60073CCED /* regex_split.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_split.hpp; sourceTree = "<group>"; };
-		FAF888EF141A62E60073CCED /* regex_token_iterator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_token_iterator.hpp; sourceTree = "<group>"; };
-		FAF888F0141A62E60073CCED /* regex_traits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_traits.hpp; sourceTree = "<group>"; };
-		FAF888F1141A62E60073CCED /* regex_traits_defaults.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_traits_defaults.hpp; sourceTree = "<group>"; };
-		FAF888F2141A62E60073CCED /* regex_workaround.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_workaround.hpp; sourceTree = "<group>"; };
-		FAF888F3141A62E60073CCED /* states.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = states.hpp; sourceTree = "<group>"; };
-		FAF888F4141A62E60073CCED /* sub_match.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sub_match.hpp; sourceTree = "<group>"; };
-		FAF888F5141A62E60073CCED /* syntax_type.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = syntax_type.hpp; sourceTree = "<group>"; };
-		FAF888F6141A62E60073CCED /* u32regex_iterator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = u32regex_iterator.hpp; sourceTree = "<group>"; };
-		FAF888F7141A62E60073CCED /* u32regex_token_iterator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = u32regex_token_iterator.hpp; sourceTree = "<group>"; };
-		FAF888F8141A62E60073CCED /* w32_regex_traits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = w32_regex_traits.hpp; sourceTree = "<group>"; };
-		FAF888FB141A62E60073CCED /* libboost_regex.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboost_regex.a; sourceTree = "<group>"; };
 		FAF888FD141A62E60073CCED /* css_lex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = css_lex.c; sourceTree = "<group>"; };
 		FAF888FE141A62E60073CCED /* css_lex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = css_lex.h; sourceTree = "<group>"; };
 		FAF888FF141A62E60073CCED /* css_syntax.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = css_syntax.c; sourceTree = "<group>"; };
@@ -154,6 +98,62 @@
 		FAF88908141A62E60073CCED /* ofxcolorbyname.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxcolorbyname.h; sourceTree = "<group>"; };
 		FAF88909141A62E60073CCED /* ofxcss.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxcss.cpp; sourceTree = "<group>"; };
 		FAF8890A141A62E60073CCED /* ofxcss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxcss.h; sourceTree = "<group>"; };
+		FAF88961141A69220073CCED /* concepts.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = concepts.hpp; sourceTree = "<group>"; };
+		FAF88963141A69220073CCED /* borland.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = borland.hpp; sourceTree = "<group>"; };
+		FAF88964141A69220073CCED /* cwchar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cwchar.hpp; sourceTree = "<group>"; };
+		FAF88965141A69220073CCED /* config.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = config.hpp; sourceTree = "<group>"; };
+		FAF88966141A69220073CCED /* icu.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = icu.hpp; sourceTree = "<group>"; };
+		FAF88967141A69220073CCED /* mfc.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = mfc.hpp; sourceTree = "<group>"; };
+		FAF88968141A69220073CCED /* pattern_except.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pattern_except.hpp; sourceTree = "<group>"; };
+		FAF8896A141A69220073CCED /* object_cache.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = object_cache.hpp; sourceTree = "<group>"; };
+		FAF8896B141A69220073CCED /* static_mutex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = static_mutex.hpp; sourceTree = "<group>"; };
+		FAF8896C141A69220073CCED /* unicode_iterator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = unicode_iterator.hpp; sourceTree = "<group>"; };
+		FAF8896D141A69220073CCED /* regex_traits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_traits.hpp; sourceTree = "<group>"; };
+		FAF8896E141A69220073CCED /* user.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = user.hpp; sourceTree = "<group>"; };
+		FAF88970141A69220073CCED /* basic_regex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = basic_regex.hpp; sourceTree = "<group>"; };
+		FAF88971141A69220073CCED /* basic_regex_creator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = basic_regex_creator.hpp; sourceTree = "<group>"; };
+		FAF88972141A69220073CCED /* basic_regex_parser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = basic_regex_parser.hpp; sourceTree = "<group>"; };
+		FAF88973141A69220073CCED /* c_regex_traits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = c_regex_traits.hpp; sourceTree = "<group>"; };
+		FAF88974141A69220073CCED /* char_regex_traits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = char_regex_traits.hpp; sourceTree = "<group>"; };
+		FAF88975141A69220073CCED /* cpp_regex_traits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cpp_regex_traits.hpp; sourceTree = "<group>"; };
+		FAF88976141A69220073CCED /* cregex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cregex.hpp; sourceTree = "<group>"; };
+		FAF88977141A69220073CCED /* error_type.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = error_type.hpp; sourceTree = "<group>"; };
+		FAF88978141A69220073CCED /* fileiter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fileiter.hpp; sourceTree = "<group>"; };
+		FAF88979141A69220073CCED /* instances.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = instances.hpp; sourceTree = "<group>"; };
+		FAF8897A141A69220073CCED /* iterator_category.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = iterator_category.hpp; sourceTree = "<group>"; };
+		FAF8897B141A69220073CCED /* iterator_traits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = iterator_traits.hpp; sourceTree = "<group>"; };
+		FAF8897C141A69220073CCED /* match_flags.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = match_flags.hpp; sourceTree = "<group>"; };
+		FAF8897D141A69220073CCED /* match_results.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = match_results.hpp; sourceTree = "<group>"; };
+		FAF8897E141A69220073CCED /* mem_block_cache.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = mem_block_cache.hpp; sourceTree = "<group>"; };
+		FAF8897F141A69220073CCED /* perl_matcher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = perl_matcher.hpp; sourceTree = "<group>"; };
+		FAF88980141A69220073CCED /* perl_matcher_common.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = perl_matcher_common.hpp; sourceTree = "<group>"; };
+		FAF88981141A69220073CCED /* perl_matcher_non_recursive.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = perl_matcher_non_recursive.hpp; sourceTree = "<group>"; };
+		FAF88982141A69220073CCED /* perl_matcher_recursive.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = perl_matcher_recursive.hpp; sourceTree = "<group>"; };
+		FAF88983141A69220073CCED /* primary_transform.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = primary_transform.hpp; sourceTree = "<group>"; };
+		FAF88984141A69220073CCED /* protected_call.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = protected_call.hpp; sourceTree = "<group>"; };
+		FAF88985141A69220073CCED /* regbase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regbase.hpp; sourceTree = "<group>"; };
+		FAF88986141A69220073CCED /* regex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex.hpp; sourceTree = "<group>"; };
+		FAF88987141A69220073CCED /* regex_format.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_format.hpp; sourceTree = "<group>"; };
+		FAF88988141A69220073CCED /* regex_fwd.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_fwd.hpp; sourceTree = "<group>"; };
+		FAF88989141A69220073CCED /* regex_grep.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_grep.hpp; sourceTree = "<group>"; };
+		FAF8898A141A69220073CCED /* regex_iterator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_iterator.hpp; sourceTree = "<group>"; };
+		FAF8898B141A69220073CCED /* regex_match.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_match.hpp; sourceTree = "<group>"; };
+		FAF8898C141A69220073CCED /* regex_merge.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_merge.hpp; sourceTree = "<group>"; };
+		FAF8898D141A69220073CCED /* regex_raw_buffer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_raw_buffer.hpp; sourceTree = "<group>"; };
+		FAF8898E141A69220073CCED /* regex_replace.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_replace.hpp; sourceTree = "<group>"; };
+		FAF8898F141A69220073CCED /* regex_search.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_search.hpp; sourceTree = "<group>"; };
+		FAF88990141A69220073CCED /* regex_split.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_split.hpp; sourceTree = "<group>"; };
+		FAF88991141A69220073CCED /* regex_token_iterator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_token_iterator.hpp; sourceTree = "<group>"; };
+		FAF88992141A69220073CCED /* regex_traits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_traits.hpp; sourceTree = "<group>"; };
+		FAF88993141A69220073CCED /* regex_traits_defaults.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_traits_defaults.hpp; sourceTree = "<group>"; };
+		FAF88994141A69220073CCED /* regex_workaround.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = regex_workaround.hpp; sourceTree = "<group>"; };
+		FAF88995141A69220073CCED /* states.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = states.hpp; sourceTree = "<group>"; };
+		FAF88996141A69220073CCED /* sub_match.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sub_match.hpp; sourceTree = "<group>"; };
+		FAF88997141A69220073CCED /* syntax_type.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = syntax_type.hpp; sourceTree = "<group>"; };
+		FAF88998141A69220073CCED /* u32regex_iterator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = u32regex_iterator.hpp; sourceTree = "<group>"; };
+		FAF88999141A69220073CCED /* u32regex_token_iterator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = u32regex_token_iterator.hpp; sourceTree = "<group>"; };
+		FAF8899A141A69220073CCED /* w32_regex_traits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = w32_regex_traits.hpp; sourceTree = "<group>"; };
+		FAF88DBE141A6A940073CCED /* libboost_regex.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboost_regex.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +175,7 @@
 				E4C2424710CC5A17004149E2 /* AppKit.framework in Frameworks */,
 				E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */,
 				E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */,
-				FAF8890B141A62E60073CCED /* libboost_regex.a in Frameworks */,
+				FAF88DBF141A6A940073CCED /* libboost_regex.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,123 +269,12 @@
 		FAF888BC141A62E60073CCED /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				FAF888BD141A62E60073CCED /* boost_regex */,
+				FAF8895F141A69220073CCED /* boost_regex */,
 				FAF888FC141A62E60073CCED /* css */,
 			);
 			name = libs;
 			path = ../libs;
 			sourceTree = SOURCE_ROOT;
-		};
-		FAF888BD141A62E60073CCED /* boost_regex */ = {
-			isa = PBXGroup;
-			children = (
-				FAF888BE141A62E60073CCED /* include */,
-				FAF888F9141A62E60073CCED /* lib */,
-			);
-			path = boost_regex;
-			sourceTree = "<group>";
-		};
-		FAF888BE141A62E60073CCED /* include */ = {
-			isa = PBXGroup;
-			children = (
-				FAF888BF141A62E60073CCED /* concepts.hpp */,
-				FAF888C0141A62E60073CCED /* config */,
-				FAF888C3141A62E60073CCED /* config.hpp */,
-				FAF888C4141A62E60073CCED /* icu.hpp */,
-				FAF888C5141A62E60073CCED /* mfc.hpp */,
-				FAF888C6141A62E60073CCED /* pattern_except.hpp */,
-				FAF888C7141A62E60073CCED /* pending */,
-				FAF888CB141A62E60073CCED /* regex_traits.hpp */,
-				FAF888CC141A62E60073CCED /* user.hpp */,
-				FAF888CD141A62E60073CCED /* v4 */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		FAF888C0141A62E60073CCED /* config */ = {
-			isa = PBXGroup;
-			children = (
-				FAF888C1141A62E60073CCED /* borland.hpp */,
-				FAF888C2141A62E60073CCED /* cwchar.hpp */,
-			);
-			path = config;
-			sourceTree = "<group>";
-		};
-		FAF888C7141A62E60073CCED /* pending */ = {
-			isa = PBXGroup;
-			children = (
-				FAF888C8141A62E60073CCED /* object_cache.hpp */,
-				FAF888C9141A62E60073CCED /* static_mutex.hpp */,
-				FAF888CA141A62E60073CCED /* unicode_iterator.hpp */,
-			);
-			path = pending;
-			sourceTree = "<group>";
-		};
-		FAF888CD141A62E60073CCED /* v4 */ = {
-			isa = PBXGroup;
-			children = (
-				FAF888CE141A62E60073CCED /* basic_regex.hpp */,
-				FAF888CF141A62E60073CCED /* basic_regex_creator.hpp */,
-				FAF888D0141A62E60073CCED /* basic_regex_parser.hpp */,
-				FAF888D1141A62E60073CCED /* c_regex_traits.hpp */,
-				FAF888D2141A62E60073CCED /* char_regex_traits.hpp */,
-				FAF888D3141A62E60073CCED /* cpp_regex_traits.hpp */,
-				FAF888D4141A62E60073CCED /* cregex.hpp */,
-				FAF888D5141A62E60073CCED /* error_type.hpp */,
-				FAF888D6141A62E60073CCED /* fileiter.hpp */,
-				FAF888D7141A62E60073CCED /* instances.hpp */,
-				FAF888D8141A62E60073CCED /* iterator_category.hpp */,
-				FAF888D9141A62E60073CCED /* iterator_traits.hpp */,
-				FAF888DA141A62E60073CCED /* match_flags.hpp */,
-				FAF888DB141A62E60073CCED /* match_results.hpp */,
-				FAF888DC141A62E60073CCED /* mem_block_cache.hpp */,
-				FAF888DD141A62E60073CCED /* perl_matcher.hpp */,
-				FAF888DE141A62E60073CCED /* perl_matcher_common.hpp */,
-				FAF888DF141A62E60073CCED /* perl_matcher_non_recursive.hpp */,
-				FAF888E0141A62E60073CCED /* perl_matcher_recursive.hpp */,
-				FAF888E1141A62E60073CCED /* primary_transform.hpp */,
-				FAF888E2141A62E60073CCED /* protected_call.hpp */,
-				FAF888E3141A62E60073CCED /* regbase.hpp */,
-				FAF888E4141A62E60073CCED /* regex.hpp */,
-				FAF888E5141A62E60073CCED /* regex_format.hpp */,
-				FAF888E6141A62E60073CCED /* regex_fwd.hpp */,
-				FAF888E7141A62E60073CCED /* regex_grep.hpp */,
-				FAF888E8141A62E60073CCED /* regex_iterator.hpp */,
-				FAF888E9141A62E60073CCED /* regex_match.hpp */,
-				FAF888EA141A62E60073CCED /* regex_merge.hpp */,
-				FAF888EB141A62E60073CCED /* regex_raw_buffer.hpp */,
-				FAF888EC141A62E60073CCED /* regex_replace.hpp */,
-				FAF888ED141A62E60073CCED /* regex_search.hpp */,
-				FAF888EE141A62E60073CCED /* regex_split.hpp */,
-				FAF888EF141A62E60073CCED /* regex_token_iterator.hpp */,
-				FAF888F0141A62E60073CCED /* regex_traits.hpp */,
-				FAF888F1141A62E60073CCED /* regex_traits_defaults.hpp */,
-				FAF888F2141A62E60073CCED /* regex_workaround.hpp */,
-				FAF888F3141A62E60073CCED /* states.hpp */,
-				FAF888F4141A62E60073CCED /* sub_match.hpp */,
-				FAF888F5141A62E60073CCED /* syntax_type.hpp */,
-				FAF888F6141A62E60073CCED /* u32regex_iterator.hpp */,
-				FAF888F7141A62E60073CCED /* u32regex_token_iterator.hpp */,
-				FAF888F8141A62E60073CCED /* w32_regex_traits.hpp */,
-			);
-			path = v4;
-			sourceTree = "<group>";
-		};
-		FAF888F9141A62E60073CCED /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				FAF888FA141A62E60073CCED /* linux64 */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		FAF888FA141A62E60073CCED /* linux64 */ = {
-			isa = PBXGroup;
-			children = (
-				FAF888FB141A62E60073CCED /* libboost_regex.a */,
-			);
-			path = linux64;
-			sourceTree = "<group>";
 		};
 		FAF888FC141A62E60073CCED /* css */ = {
 			isa = PBXGroup;
@@ -415,6 +304,117 @@
 			name = ofxCss;
 			path = ../src;
 			sourceTree = SOURCE_ROOT;
+		};
+		FAF8895F141A69220073CCED /* boost_regex */ = {
+			isa = PBXGroup;
+			children = (
+				FAF88960141A69220073CCED /* include */,
+				FAF8899B141A69220073CCED /* lib */,
+			);
+			path = boost_regex;
+			sourceTree = "<group>";
+		};
+		FAF88960141A69220073CCED /* include */ = {
+			isa = PBXGroup;
+			children = (
+				FAF88961141A69220073CCED /* concepts.hpp */,
+				FAF88962141A69220073CCED /* config */,
+				FAF88965141A69220073CCED /* config.hpp */,
+				FAF88966141A69220073CCED /* icu.hpp */,
+				FAF88967141A69220073CCED /* mfc.hpp */,
+				FAF88968141A69220073CCED /* pattern_except.hpp */,
+				FAF88969141A69220073CCED /* pending */,
+				FAF8896D141A69220073CCED /* regex_traits.hpp */,
+				FAF8896E141A69220073CCED /* user.hpp */,
+				FAF8896F141A69220073CCED /* v4 */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		FAF88962141A69220073CCED /* config */ = {
+			isa = PBXGroup;
+			children = (
+				FAF88963141A69220073CCED /* borland.hpp */,
+				FAF88964141A69220073CCED /* cwchar.hpp */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		FAF88969141A69220073CCED /* pending */ = {
+			isa = PBXGroup;
+			children = (
+				FAF8896A141A69220073CCED /* object_cache.hpp */,
+				FAF8896B141A69220073CCED /* static_mutex.hpp */,
+				FAF8896C141A69220073CCED /* unicode_iterator.hpp */,
+			);
+			path = pending;
+			sourceTree = "<group>";
+		};
+		FAF8896F141A69220073CCED /* v4 */ = {
+			isa = PBXGroup;
+			children = (
+				FAF88970141A69220073CCED /* basic_regex.hpp */,
+				FAF88971141A69220073CCED /* basic_regex_creator.hpp */,
+				FAF88972141A69220073CCED /* basic_regex_parser.hpp */,
+				FAF88973141A69220073CCED /* c_regex_traits.hpp */,
+				FAF88974141A69220073CCED /* char_regex_traits.hpp */,
+				FAF88975141A69220073CCED /* cpp_regex_traits.hpp */,
+				FAF88976141A69220073CCED /* cregex.hpp */,
+				FAF88977141A69220073CCED /* error_type.hpp */,
+				FAF88978141A69220073CCED /* fileiter.hpp */,
+				FAF88979141A69220073CCED /* instances.hpp */,
+				FAF8897A141A69220073CCED /* iterator_category.hpp */,
+				FAF8897B141A69220073CCED /* iterator_traits.hpp */,
+				FAF8897C141A69220073CCED /* match_flags.hpp */,
+				FAF8897D141A69220073CCED /* match_results.hpp */,
+				FAF8897E141A69220073CCED /* mem_block_cache.hpp */,
+				FAF8897F141A69220073CCED /* perl_matcher.hpp */,
+				FAF88980141A69220073CCED /* perl_matcher_common.hpp */,
+				FAF88981141A69220073CCED /* perl_matcher_non_recursive.hpp */,
+				FAF88982141A69220073CCED /* perl_matcher_recursive.hpp */,
+				FAF88983141A69220073CCED /* primary_transform.hpp */,
+				FAF88984141A69220073CCED /* protected_call.hpp */,
+				FAF88985141A69220073CCED /* regbase.hpp */,
+				FAF88986141A69220073CCED /* regex.hpp */,
+				FAF88987141A69220073CCED /* regex_format.hpp */,
+				FAF88988141A69220073CCED /* regex_fwd.hpp */,
+				FAF88989141A69220073CCED /* regex_grep.hpp */,
+				FAF8898A141A69220073CCED /* regex_iterator.hpp */,
+				FAF8898B141A69220073CCED /* regex_match.hpp */,
+				FAF8898C141A69220073CCED /* regex_merge.hpp */,
+				FAF8898D141A69220073CCED /* regex_raw_buffer.hpp */,
+				FAF8898E141A69220073CCED /* regex_replace.hpp */,
+				FAF8898F141A69220073CCED /* regex_search.hpp */,
+				FAF88990141A69220073CCED /* regex_split.hpp */,
+				FAF88991141A69220073CCED /* regex_token_iterator.hpp */,
+				FAF88992141A69220073CCED /* regex_traits.hpp */,
+				FAF88993141A69220073CCED /* regex_traits_defaults.hpp */,
+				FAF88994141A69220073CCED /* regex_workaround.hpp */,
+				FAF88995141A69220073CCED /* states.hpp */,
+				FAF88996141A69220073CCED /* sub_match.hpp */,
+				FAF88997141A69220073CCED /* syntax_type.hpp */,
+				FAF88998141A69220073CCED /* u32regex_iterator.hpp */,
+				FAF88999141A69220073CCED /* u32regex_token_iterator.hpp */,
+				FAF8899A141A69220073CCED /* w32_regex_traits.hpp */,
+			);
+			path = v4;
+			sourceTree = "<group>";
+		};
+		FAF8899B141A69220073CCED /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				FAF8899E141A69220073CCED /* osx */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		FAF8899E141A69220073CCED /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				FAF88DBE141A6A940073CCED /* libboost_regex.a */,
+			);
+			path = osx;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -675,7 +675,7 @@
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6 = "\"$(SRCROOT)/../../../addons/ofxOpenCv/libs/opencv/lib/osx\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7 = "\"$(SRCROOT)/../../../addons/ofxOpenCv/libs/opencv/lib/vs2010\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8 = "\"$(SRCROOT)/../../../addons/ofxOpenCv/libs/opencv/lib/win_cb\"";
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9 = "\"$(SRCROOT)/../libs/boost_regex/lib/linux64\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9 = "\"$(SRCROOT)/../libs/boost_regex/lib/osx\"";
 				PREBINDING = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
 				WRAPPER_EXTENSION = app;
@@ -770,8 +770,10 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../addons/ofxOpenCv/libs/opencv/lib/android/armeabi\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10 = "\"$(SRCROOT)/../libs/boost_regex/lib/osx\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/../../../addons/ofxOpenCv/libs/opencv/lib/android/armeabi-v7a\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3 = "\"$(SRCROOT)/../../../addons/ofxOpenCv/libs/opencv/lib/iphone\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 = "\"$(SRCROOT)/../../../addons/ofxOpenCv/libs/opencv/lib/linux\"";
