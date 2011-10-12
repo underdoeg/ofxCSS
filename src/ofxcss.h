@@ -4,6 +4,11 @@
 #include "ofMain.h"
 #include "parser_pp.h"
 
+enum OFX_CSS_DIRECTION {
+	OFX_CSS_HORIZONTAL,
+	OFX_CSS_VERTICAL,
+};
+
 class ofxCssNumber {
 public:
 	enum types {PIXEL, PERCENT};
@@ -13,6 +18,25 @@ public:
 
 class ofxCssBorder {
 public:
+	void set(bool _enabled, float _width, ofColor _color){
+		enabled = _enabled;
+		width = _width;
+		color = _color;
+	}
+	
+	void draw(float x, float y, float length, int dir){
+		if(!enabled)
+			return;
+
+		ofFill();
+		ofSetColor(color);
+		if(dir == OFX_CSS_HORIZONTAL){
+			ofRect(x, y, length, width);
+		}else if (dir == OFX_CSS_VERTICAL) {
+			ofRect(x, y, width, length);
+		}
+	}
+	
 	bool enabled;
 	ofColor color;
 	float width;
@@ -54,6 +78,13 @@ public:
 
 class ofxCssBlock {
 public:
+	ofxCssBlock(){
+		hasBackground = false;
+		backgroundColor.set(120);
+		color.set(0);
+		setAllBorders(false);
+	}
+	
 	bool hasBackground;
 	bool hasBackgroundImage;
 	ofColor color;
@@ -63,6 +94,33 @@ public:
 	ofxCssBorder borderRight;
 	ofxCssBorder borderBottom;
 	ofxCssBorder borderLeft;
+	
+	void setAllBorders(bool enabled){
+		borderTop.enabled = enabled;
+		borderRight.enabled = enabled;
+		borderBottom.enabled = enabled;
+		borderLeft.enabled = enabled;
+	}
+	
+	void setAllBorders(bool enabled, float width, ofColor color){
+		borderTop.set(enabled, width, color);
+		borderRight.set(enabled, width, color);
+		borderBottom.set(enabled, width, color);
+		borderLeft.set(enabled, width, color);
+	}
+	
+	void drawRect(float x, float y, float width, float height){
+		if(hasBackground){
+			ofFill();
+			ofSetColor(backgroundColor);
+			ofRect(x, y, width, height);
+		}
+		
+		borderTop.draw(x, y, width, OFX_CSS_HORIZONTAL);
+		borderRight.draw(x+width-borderRight.width, y, height, OFX_CSS_VERTICAL);
+		borderBottom.draw(x, y+height-borderBottom.width, width, OFX_CSS_HORIZONTAL);
+		borderRight.draw(x, y, height, OFX_CSS_VERTICAL);
+	}
 };
 
 
