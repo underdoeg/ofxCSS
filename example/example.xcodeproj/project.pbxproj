@@ -23,6 +23,7 @@
 		E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424510CC5A17004149E2 /* Cocoa.framework */; };
 		E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424610CC5A17004149E2 /* IOKit.framework */; };
 		E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		FA161C83151FC804003858B9 /* ofxCssLayoutable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA161C82151FC804003858B9 /* ofxCssLayoutable.cpp */; };
 		FAF888BB141A62D00073CCED /* exampleApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAF888B9141A62D00073CCED /* exampleApp.cpp */; };
 		FAF8890C141A62E60073CCED /* css_lex.c in Sources */ = {isa = PBXBuildFile; fileRef = FAF888FD141A62E60073CCED /* css_lex.c */; };
 		FAF8890D141A62E60073CCED /* css_syntax.c in Sources */ = {isa = PBXBuildFile; fileRef = FAF888FF141A62E60073CCED /* css_syntax.c */; };
@@ -83,6 +84,9 @@
 		E4C2424610CC5A17004149E2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		FA161C75151FC682003858B9 /* sample.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = sample.css; path = bin/data/sample.css; sourceTree = SOURCE_ROOT; };
+		FA161C81151FC804003858B9 /* ofxCssLayoutable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCssLayoutable.h; sourceTree = "<group>"; };
+		FA161C82151FC804003858B9 /* ofxCssLayoutable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCssLayoutable.cpp; sourceTree = "<group>"; };
 		FAF888B9141A62D00073CCED /* exampleApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = exampleApp.cpp; sourceTree = "<group>"; };
 		FAF888BA141A62D00073CCED /* exampleApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exampleApp.h; sourceTree = "<group>"; };
 		FAF888FD141A62E60073CCED /* css_lex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = css_lex.c; sourceTree = "<group>"; };
@@ -248,6 +252,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				FA161C75151FC682003858B9 /* sample.css */,
 				FAF888B9141A62D00073CCED /* exampleApp.cpp */,
 				FAF888BA141A62D00073CCED /* exampleApp.h */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
@@ -300,6 +305,8 @@
 				FAF88908141A62E60073CCED /* ofxcolorbyname.h */,
 				FAF88909141A62E60073CCED /* ofxcss.cpp */,
 				FAF8890A141A62E60073CCED /* ofxcss.h */,
+				FA161C81151FC804003858B9 /* ofxCssLayoutable.h */,
+				FA161C82151FC804003858B9 /* ofxCssLayoutable.cpp */,
 			);
 			name = ofxCss;
 			path = ../src;
@@ -507,6 +514,7 @@
 				FAF8890F141A62E60073CCED /* parser_pp.cc in Sources */,
 				FAF88910141A62E60073CCED /* ofxcolorbyname.cpp in Sources */,
 				FAF88911141A62E60073CCED /* ofxcss.cpp in Sources */,
+				FA161C83151FC804003858B9 /* ofxCssLayoutable.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -44,18 +44,19 @@ void ofxCss::parse(string css) {
 	parser.parse(css);
 }
 
-ofxCssBlock &ofxCss::get(string element, string ofClass) {
+ofxCssBlock ofxCss::get(string element, string ofClass) {
 	//check if element was already processed
-	bool hasClass = false;
-	if(ofClass != "")
-		hasClass = true;
+	ofxCssBlock block;
+	applyStyleTo(&block, element, ofClass);
+	return block;
 
-	string key = element;
+
+	/*string key = element;
 	if(hasClass)
 		key +=":"+ofClass;
 	BlockList::iterator iter = blocks.find(key);
 	if(iter != blocks.end())
-		return blocks[key];
+		return blocks[key];*/
 
 	//we have to create a new one
 	/*
@@ -63,31 +64,39 @@ ofxCssBlock &ofxCss::get(string element, string ofClass) {
 	for(std::vector<string>::iterator it=elements.begin(); it!=elements.end();++it){
 	}
 	*/
+	
+
+	//blocks[key] = parseAttributeList(parser.getAttributes(selectorList));
+	//return blocks[key];
+}
+
+void ofxCss::applyStyleTo(ofxCssBlock* block, string element, string ofClass){
+	bool hasClass = false;
+	if(ofClass != "")
+		hasClass = true;
+	
 	std::vector<Parser::Selector> selectorList;
 	Parser::Selector selector;
 	selector.setElement(element);
 	if(hasClass)
 		selector.setClass(ofClass);
 	selectorList.push_back(selector);
-
-	blocks[key] = parseAttributeList(parser.getAttributes(selectorList));
-	return blocks[key];
+	
+	parseAttributeList(block, parser.getAttributes(selectorList));
 }
 
-ofxCssBlock ofxCss::parseAttributeList(AttributeList list) {
-	ofxCssBlock block;
+ofxCssBlock ofxCss::parseAttributeList(ofxCssBlock* block, AttributeList list) {
 	for ( AttributeList::const_iterator iter = list.begin(); iter != list.end(); ++iter ) {
 		cout << iter->first << ": " << iter->second << endl;
 		parseAttribute(block, iter->first, iter->second);
 	}
-	return block;
 }
 
-ofxCssBlock &ofxCss::operator [](string element) {
+ofxCssBlock ofxCss::operator [](string element) {
 	return get(element);
 }
 
-void ofxCss::parseAttribute(ofxCssBlock& block, string property, string value) {
+void ofxCss::parseAttribute(ofxCssBlock* block, string property, string value) {
 	//check for existance of function pointer
 	ParserFunctionsList::iterator iter = parserFunctions.find(property);
 	if(iter == parserFunctions.end()) {
@@ -103,24 +112,24 @@ void ofxCss::parseAttribute(ofxCssBlock& block, string property, string value) {
  * CSS PARSING FUNCTIONS
  */
 //color
-void ofxCss::pBackgroundColor(ofxCssBlock& block, string value) {
+void ofxCss::pBackgroundColor(ofxCssBlock* block, string value) {
 	if(ofIsStringInString(value, "#")){//color is hexadecimal
 		ofStringReplace(value, "#", "0x");
 		stringstream convert(value);
-		block.backgroundColor = ofColor::fromHex(ofHexToInt(value));
-		cout << (int)block.backgroundColor.r << endl;
+		block->backgroundColor = ofColor::fromHex(ofHexToInt(value));
+		cout << (int)block->backgroundColor.r << endl;
 	}else if(ofIsStringInString(value, "rgb")){
 		boost::regex rexpr("[^0-9]*([0-9]*)[^0-9]*([0-9]*)[^0-9]*([0-9]*)[^0-9]*");
 		boost::cmatch match;
 		if(regex_match(value.c_str(), match, rexpr)){
-			block.backgroundColor.set(ofToInt(string(match[1].first, match[1].second)), ofToInt(string(match[2].first, match[2].second)), ofToInt(string(match[3].first, match[3].second)));
+			block->backgroundColor.set(ofToInt(string(match[1].first, match[1].second)), ofToInt(string(match[2].first, match[2].second)), ofToInt(string(match[3].first, match[3].second)));
 		}
 	}else if(ofIsStringInString(value, "rgba")){ //TODO: DOESN'T WORK YET...
 		boost::regex rexpr("[^0-9]*([0-9]*)[^0-9]*([0-9]*)[^0-9]*([0-9]*)[^0-9]*([0-9]*)[^0-9]*");
 		boost::cmatch match;
 		if(regex_match(value.c_str(), match, rexpr)){
 			cout << match[0] << endl;
-			block.backgroundColor.set(ofToInt(string(match[1].first, match[1].second)), ofToInt(string(match[2].first, match[2].second)),
+			block->backgroundColor.set(ofToInt(string(match[1].first, match[1].second)), ofToInt(string(match[2].first, match[2].second)),
 										ofToInt(string(match[3].first, match[3].second)), ofToInt(string(match[4].first, match[4].second)));
 		}
 	}else{
@@ -128,59 +137,59 @@ void ofxCss::pBackgroundColor(ofxCssBlock& block, string value) {
 	}
 }
 
-void ofxCss::pColor(ofxCssBlock& block, string value) {
+void ofxCss::pColor(ofxCssBlock* block, string value) {
 
 }
 
 //margin
-void ofxCss::pMargin(ofxCssBlock& block, string value) {
+void ofxCss::pMargin(ofxCssBlock* block, string value) {
 
 }
 
-void ofxCss::pMarginBottom(ofxCssBlock& block, string value) {
+void ofxCss::pMarginBottom(ofxCssBlock* block, string value) {
 }
 
-void ofxCss::pMarginLeft(ofxCssBlock& block, string value) {
+void ofxCss::pMarginLeft(ofxCssBlock* block, string value) {
 }
 
-void ofxCss::pMarginRight(ofxCssBlock& block, string value) {
+void ofxCss::pMarginRight(ofxCssBlock* block, string value) {
 }
 
-void ofxCss::pMarginTop(ofxCssBlock& block, string value) {
+void ofxCss::pMarginTop(ofxCssBlock* block, string value) {
 }
 
 //padding
-void ofxCss::pPadding(ofxCssBlock& block, string value) {
+void ofxCss::pPadding(ofxCssBlock* block, string value) {
 }
 
-void ofxCss::pPaddingBottom(ofxCssBlock& block, string value) {
+void ofxCss::pPaddingBottom(ofxCssBlock* block, string value) {
 }
 
-void ofxCss::pPaddingLeft(ofxCssBlock& block, string value) {
+void ofxCss::pPaddingLeft(ofxCssBlock* block, string value) {
 }
 
-void ofxCss::pPaddingRight(ofxCssBlock& block, string value) {
+void ofxCss::pPaddingRight(ofxCssBlock* block, string value) {
 }
 
-void ofxCss::pPaddingTop(ofxCssBlock& block, string value) {
+void ofxCss::pPaddingTop(ofxCssBlock* block, string value) {
 }
 
 //border
-void ofxCss::pBorder(ofxCssBlock& block, string value) {
+void ofxCss::pBorder(ofxCssBlock* block, string value) {
 }
 
-void ofxCss::pBorderBottom(ofxCssBlock& block, string value) {
+void ofxCss::pBorderBottom(ofxCssBlock* block, string value) {
 }
 
-void ofxCss::pBorderLeft(ofxCssBlock& block, string value) {
+void ofxCss::pBorderLeft(ofxCssBlock* block, string value) {
 }
 
-void ofxCss::pBorderRight(ofxCssBlock& block, string value) {
+void ofxCss::pBorderRight(ofxCssBlock* block, string value) {
 }
 
-void ofxCss::pBorderTop(ofxCssBlock& block, string value) {
+void ofxCss::pBorderTop(ofxCssBlock* block, string value) {
 }
 
 //bg
-void ofxCss::pBackgroundImage(ofxCssBlock& block, string value) {
+void ofxCss::pBackgroundImage(ofxCssBlock* block, string value) {
 }
